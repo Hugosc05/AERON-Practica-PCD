@@ -1,0 +1,31 @@
+[10:43:33.298] >>> INICIO DE SIMULACIÓN: Secuencial <<<
+[10:43:33.304] Configuración: 20 Aviones, 1 Pistas, 1 Puertas.
+[10:43:33.309] >>> INICIANDO SECUENCIA <<<
+[10:43:33.320] Avión 1 solicita aterrizaje.
+[10:43:33.822] Avión 1 autorizado a aterrizar en Pista 1.
+[10:43:34.890] Avión 1 libera Pista.
+[10:43:34.890] Avión 1 solicita puerta.
+[10:43:35.098] Avión 1 entra en Puerta 1.
+[10:43:37.061] Avión 1 libera Puerta.
+[10:43:37.062] Avión 1 solicita despegue.
+[10:43:37.563] Avión 1 despegando por Pista 1.
+[10:43:39.021] Avión 1 libera Pista.
+[10:43:39.536] Avión 2 solicita aterrizaje.
+[10:43:40.045] Avión 2 autorizado a aterrizar en Pista 1.
+[10:43:41.432] Avión 2 libera Pista.
+[10:43:41.432] Avión 2 solicita puerta.
+[10:43:41.633] Avión 2 entra en Puerta 1.
+[10:43:43.197] Avión 2 libera Puerta.
+[10:43:43.197] Avión 2 solicita despegue.
+[10:43:43.708] Avión 2 despegando por Pista 1.
+[10:43:44.764] Avión 2 libera Pista.
+[10:43:45.279] Avión 3 solicita aterrizaje.
+[10:43:45.789] Avión 3 autorizado a aterrizar en Pista 1.
+[10:43:47.050] Avión 3 libera Pista.
+[10:43:47.050] Avión 3 solicita puerta.
+[10:43:47.252] Avión 3 entra en Puerta 1.
+[10:43:48.780] Avión 3 libera Puerta.
+[10:43:48.780] Avión 3 solicita despegue.
+[10:43:49.288] Avión 3 despegando por Pista 1.
+[10:43:50.471] Avión 3 libera Pista.
+[10:43:50.986] Avión 4 solicita aterrizaje.
