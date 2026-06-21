@@ -61,13 +61,17 @@ public class Simulador extends JFrame {
         
         // Pasamos parámetros a la Torre para que configure sus Semáforos
         TorreDeControl torre = new TorreDeControl(modeloLogTorre, airportState, NUM_PISTAS, NUM_PUERTAS); 
-        
+
+        GestorZonaSeguridad gestor = new GestorZonaSeguridad();
+        HiloClima hiloClima = new HiloClima(gestor);
+
+        hiloClima.start();
         modeloLogTorre.addElement(">>> MODO CONCURRENTE <<<");
         LogManager.log("Inicio Simulación Concurrente. Operarios: " + NUM_OPERARIOS);
 
         // Lanzar Hilos de Aviones
         for (int i = 1; i <= NUM_AVIONES; i++) {
-            Avion avion = new Avion(i, torre, areaLogAviones, modeloTabla);
+            Avion avion = new Avion(i, torre, areaLogAviones, modeloTabla, gestor);
             new Thread(avion).start();
         }
         

@@ -13,18 +13,20 @@ public class Avion implements Runnable {
     private TorreDeControl torre;
     private long tiempoInicioOperacion;
     private Random random;
+    private GestorZonaSeguridad gestor;
 
     // Atributos para la UI
     private JTextArea logVentanaAviones;
     private DefaultTableModel modeloTablaVuelos;
 
-    public Avion(int id, TorreDeControl torre, JTextArea logArea, DefaultTableModel modeloTabla) {
+    public Avion(int id, TorreDeControl torre, JTextArea logArea, DefaultTableModel modeloTabla, GestorZonaSeguridad gestor) {
         this.idAvion = id;
         this.torre = torre;
         this.estado = EstadoAvion.EN_AIRE;
         this.logVentanaAviones = logArea;
         this.modeloTablaVuelos = modeloTabla;
         this.random = new Random();
+        this.gestor = gestor;
     }
 
     public int getIdAvion(){
@@ -47,7 +49,12 @@ public class Avion implements Runnable {
 
             actualizarEstado(EstadoAvion.ATERRIZANDO);
             logEvento("Aterrizando en Pista " + recursos.getIdPista());
-            Thread.sleep(1000 + random.nextInt(500)); 
+            gestor.entrarZona();
+            try {
+                Thread.sleep(1000 + random.nextInt(500)); 
+            } finally {
+                gestor.salirZona();
+            } 
 
             // 2. LIBERAR PISTA Y SOLICITAR PUERTA
             logEvento("Aterrizaje completado. Liberando pista " + recursos.getIdPista() + "...");
@@ -79,7 +86,12 @@ public class Avion implements Runnable {
             
             actualizarEstado(EstadoAvion.DESPEGANDO);
             logEvento("Despegando por Pista " + pistaDespegue + "...");
-            Thread.sleep(1000 + random.nextInt(500)); 
+            gestor.entrarZona();
+            try {
+                Thread.sleep(1000 + random.nextInt(500)); 
+            } finally {
+                gestor.salirZona();
+            }
             
             // 4. FIN
             actualizarEstado(EstadoAvion.FIN_CICLO);

@@ -1,0 +1,183 @@
+[10:25:20.051] >>> INICIO DE SIMULACIÓN: Concurrente <<<
+[10:25:20.061] Configuración: 20 Aviones, 3 Pistas, 5 Puertas.
+[10:25:20.081] Inicio Simulación Concurrente. Operarios: 5
+[10:25:20.118] Avión 10 solicita aterrizaje.
+[10:25:20.118] Avión 12 solicita aterrizaje.
+[10:25:20.118] Avión 8 solicita aterrizaje.
+[10:25:20.118] Avión 1 solicita aterrizaje.
+[10:25:20.119] Avión 13 solicita aterrizaje.
+[10:25:20.119] Avión 17 solicita aterrizaje.
+[10:25:20.119] Avión 5 solicita aterrizaje.
+[10:25:20.120] Avión 15 solicita aterrizaje.
+[10:25:20.120] Avión 7 solicita aterrizaje.
+[10:25:20.125] Avión 16 solicita aterrizaje.
+[10:25:20.125] Avión 20 solicita aterrizaje.
+[10:25:20.125] Avión 18 solicita aterrizaje.
+[10:25:20.125] Avión 11 solicita aterrizaje.
+[10:25:20.126] Avión 14 solicita aterrizaje.
+[10:25:20.126] Avión 8 aterriza en Pista 3
+[10:25:20.126] Avión 4 solicita aterrizaje.
+[10:25:20.126] Avión 6 solicita aterrizaje.
+[10:25:20.126] Avión 2 solicita aterrizaje.
+[10:25:20.127] Avión 12 aterriza en Pista 2
+[10:25:20.127] Avión 9 solicita aterrizaje.
+[10:25:20.127] Avión 10 aterriza en Pista 1
+[10:25:20.127] Avión 3 solicita aterrizaje.
+[10:25:20.127] Avión 19 solicita aterrizaje.
+[10:25:21.261] Avión 1 aterriza en Pista 3
+[10:25:21.261] Avión 8 libera Pista 3
+[10:25:21.262] Avión 8 solicita puerta.
+[10:25:21.262] Avión 8 asignado a Puerta 1
+[10:25:21.489] Avión 12 libera Pista 2
+[10:25:21.489] Avión 13 aterriza en Pista 2
+[10:25:21.490] Avión 12 solicita puerta.
+[10:25:21.490] Avión 12 asignado a Puerta 2
+[10:25:22.546] Avión 1 libera Pista 3
+[10:25:22.546] Avión 17 aterriza en Pista 3
+[10:25:22.547] Avión 1 solicita puerta.
+[10:25:22.547] Avión 1 asignado a Puerta 3
+[10:25:22.637] Avión 10 libera Pista 1
+[10:25:22.637] Avión 5 aterriza en Pista 1
+[10:25:22.637] Avión 10 solicita puerta.
+[10:25:22.637] Avión 10 asignado a Puerta 4
+[10:25:23.247] Avión 8 libera Puerta 1
+[10:25:23.249] Avión 8 solicita despegue.
+[10:25:23.353] Avión 12 libera Puerta 2
+[10:25:23.353] Avión 12 solicita despegue.
+[10:25:23.620] Avión 13 libera Pista 2
+[10:25:23.621] Avión 15 aterriza en Pista 2
+[10:25:23.621] Avión 13 solicita puerta.
+[10:25:23.621] Avión 13 asignado a Puerta 1
+[10:25:23.872] Avión 17 libera Pista 3
+[10:25:23.872] Avión 7 aterriza en Pista 3
+[10:25:23.872] Avión 17 solicita puerta.
+[10:25:23.872] Avión 17 asignado a Puerta 2
+[10:25:24.301] Avión 1 libera Puerta 3
+[10:25:24.301] Avión 1 solicita despegue.
+[10:25:24.529] Avión 10 libera Puerta 4
+[10:25:24.529] Avión 10 solicita despegue.
+[10:25:24.853] Avión 5 libera Pista 1
+[10:25:24.853] Avión 16 aterriza en Pista 1
+[10:25:24.854] Avión 5 solicita puerta.
+[10:25:24.854] Avión 5 asignado a Puerta 3
+[10:25:24.872] Avión 15 libera Pista 2
+[10:25:24.872] Avión 20 aterriza en Pista 2
+[10:25:24.873] Avión 15 solicita puerta.
+[10:25:24.873] Avión 15 asignado a Puerta 4
+[10:25:25.506] Avión 13 libera Puerta 1
+[10:25:25.506] Avión 13 solicita despegue.
+[10:25:25.795] Avión 17 libera Puerta 2
+[10:25:25.795] Avión 17 solicita despegue.
+[10:25:26.074] Avión 7 libera Pista 3
+[10:25:26.074] Avión 18 aterriza en Pista 3
+[10:25:26.075] Avión 7 solicita puerta.
+[10:25:26.075] Avión 7 asignado a Puerta 1
+[10:25:26.255] Avión 16 libera Pista 1
+[10:25:26.256] Avión 11 aterriza en Pista 1
+[10:25:26.256] Avión 16 solicita puerta.
+[10:25:26.256] Avión 16 asignado a Puerta 2
+[10:25:26.384] Avión 5 libera Puerta 3
+[10:25:26.384] Avión 5 solicita despegue.
+[10:25:26.476] Avión 15 libera Puerta 4
+[10:25:26.476] Avión 15 solicita despegue.
+[10:25:27.486] Avión 20 libera Pista 2
+[10:25:27.487] Avión 14 aterriza en Pista 2
+[10:25:27.487] Avión 20 solicita puerta.
+[10:25:27.487] Avión 20 asignado a Puerta 3
+[10:25:27.708] Avión 18 libera Pista 3
+[10:25:27.709] Avión 4 aterriza en Pista 3
+[10:25:27.709] Avión 18 solicita puerta.
+[10:25:27.710] Avión 18 asignado a Puerta 4
+[10:25:28.026] Avión 7 libera Puerta 1
+[10:25:28.026] Avión 7 solicita despegue.
+[10:25:28.103] Avión 16 libera Puerta 2
+[10:25:28.103] Avión 16 solicita despegue.
+[10:25:28.830] Avión 11 libera Pista 1
+[10:25:28.830] Avión 6 aterriza en Pista 1
+[10:25:28.831] Avión 11 solicita puerta.
+[10:25:28.831] Avión 11 asignado a Puerta 1
+[10:25:29.097] Avión 14 libera Pista 2
+[10:25:29.098] Avión 2 aterriza en Pista 2
+[10:25:29.098] Avión 14 solicita puerta.
+[10:25:29.099] Avión 14 asignado a Puerta 2
+[10:25:29.249] Avión 20 libera Puerta 3
+[10:25:29.249] Avión 20 solicita despegue.
+[10:25:29.342] Avión 18 libera Puerta 4
+[10:25:29.342] Avión 18 solicita despegue.
+[10:25:30.301] Avión 4 libera Pista 3
+[10:25:30.302] Avión 9 aterriza en Pista 3
+[10:25:30.302] Avión 4 solicita puerta.
+[10:25:30.302] Avión 4 asignado a Puerta 3
+[10:25:30.498] Avión 6 libera Pista 1
+[10:25:30.498] Avión 3 aterriza en Pista 1
+[10:25:30.499] Avión 6 solicita puerta.
+[10:25:30.499] Avión 6 asignado a Puerta 4
+[10:25:30.716] Avión 11 libera Puerta 1
+[10:25:30.716] Avión 11 solicita despegue.
+[10:25:30.991] Avión 14 libera Puerta 2
+[10:25:30.991] Avión 14 solicita despegue.
+[10:25:31.486] Avión 2 libera Pista 2
+[10:25:31.486] Avión 19 aterriza en Pista 2
+[10:25:31.486] Avión 2 solicita puerta.
+[10:25:31.486] Avión 2 asignado a Puerta 1
+[10:25:31.888] Avión 9 libera Pista 3
+[10:25:31.889] Avión 9 solicita puerta.
+[10:25:31.889] Avión 9 asignado a Puerta 2
+[10:25:31.889] Avión 8 despega por Pista 3
+[10:25:32.034] Avión 6 libera Puerta 4
+[10:25:32.034] Avión 6 solicita despegue.
+[10:25:32.160] Avión 4 libera Puerta 3
+[10:25:32.160] Avión 4 solicita despegue.
+[10:25:32.856] Avión 3 libera Pista 1
+[10:25:32.856] Avión 12 despega por Pista 1
+[10:25:32.857] Avión 3 solicita puerta.
+[10:25:32.857] Avión 3 asignado a Puerta 3
+[10:25:33.333] Avión 19 libera Pista 2
+[10:25:33.333] Avión 1 despega por Pista 2
+[10:25:33.334] Avión 19 solicita puerta.
+[10:25:33.334] Avión 19 asignado a Puerta 4
+[10:25:33.362] Avión 2 libera Puerta 1
+[10:25:33.362] Avión 2 solicita despegue.
+[10:25:33.626] Avión 9 libera Puerta 2
+[10:25:33.626] Avión 9 solicita despegue.
+[10:25:34.327] Avión 8 libera Pista 3
+[10:25:34.328] Avión 10 despega por Pista 3
+[10:25:34.531] Avión 3 libera Puerta 3
+[10:25:34.531] Avión 3 solicita despegue.
+[10:25:34.550] Avión 12 libera Pista 1
+[10:25:34.550] Avión 13 despega por Pista 1
+[10:25:35.173] Avión 19 libera Puerta 4
+[10:25:35.173] Avión 19 solicita despegue.
+[10:25:45.088] Avión 10 libera Pista 3
+[10:25:45.089] Avión 17 despega por Pista 3
+[10:25:45.089] Avión 1 libera Pista 2
+[10:25:45.089] Avión 5 despega por Pista 2
+[10:25:46.339] Avión 17 libera Pista 3
+[10:25:46.339] Avión 15 despega por Pista 3
+[10:25:46.565] Avión 13 libera Pista 1
+[10:25:46.567] Avión 7 despega por Pista 1
+[10:25:47.738] Avión 5 libera Pista 2
+[10:25:47.740] Avión 16 despega por Pista 2
+[10:25:47.927] Avión 15 libera Pista 3
+[10:25:47.927] Avión 20 despega por Pista 3
+[10:25:49.031] Avión 16 libera Pista 2
+[10:25:49.032] Avión 18 despega por Pista 2
+[10:25:49.170] Avión 7 libera Pista 1
+[10:25:49.170] Avión 11 despega por Pista 1
+[10:25:50.147] Avión 20 libera Pista 3
+[10:25:50.147] Avión 14 despega por Pista 3
+[10:25:50.672] Avión 18 libera Pista 2
+[10:25:50.673] Avión 6 despega por Pista 2
+[10:25:51.349] Avión 11 libera Pista 1
+[10:25:51.350] Avión 4 despega por Pista 1
+[10:25:52.095] Avión 14 libera Pista 3
+[10:25:52.095] Avión 2 despega por Pista 3
+[10:25:52.374] Avión 6 libera Pista 2
+[10:25:52.374] Avión 9 despega por Pista 2
+[10:25:53.170] Avión 4 libera Pista 1
+[10:25:53.170] Avión 3 despega por Pista 1
+[10:25:53.599] Avión 2 libera Pista 3
+[10:25:53.600] Avión 19 despega por Pista 3
+[10:25:54.538] Avión 9 libera Pista 2
+[10:25:54.846] Avión 3 libera Pista 1
+[10:25:55.609] Avión 19 libera Pista 3
