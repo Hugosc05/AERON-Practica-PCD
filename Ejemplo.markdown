@@ -319,3 +319,139 @@ public void run() {
 
     }
 }
+
+Ejercicio 4: Vehículo Remolcador Único (Recurso Exclusivo Físico)
+
+Enunciado
+El aeropuerto ha instaurado una norma de reducción de ruido. Los aviones ya no pueden ir desde la pista hasta la puerta de embarque por sus propios medios; necesitan ser remolcados.
+
+    Solo existe un (1) vehículo remolcador en todo el aeropuerto.
+
+    El avión debe solicitar el remolcador justo después de liberar la pista de aterrizaje y antes de solicitar la puerta.
+
+    La maniobra de remolque dura 2 segundos, tras los cuales el avión libera el remolcador y continúa su ejecución normal.
+
+Paso 1: Crear GestorRemolque.java
+Este monitor actúa casi como un semáforo binario (Mutex), garantizando que solo un hilo tenga el recurso a la vez.
+Java
+
+package aeronpcd.model.concurrent;
+
+public class GestorRemolque {
+    
+    private boolean remolqueLibre = true;
+
+    public synchronized void engancharRemolque() throws InterruptedException {
+        while (!remolqueLibre) {
+            wait();
+        }
+        remolqueLibre = false;
+    }
+
+    public synchronized void soltarRemolque() {
+        remolqueLibre = true;
+        notifyAll();
+    }
+}
+
+Paso 2: Modificar Avion.java
+Se añade el gestor al constructor. El cambio clave ocurre en la transición entre la pista y la puerta.
+Java
+
+torre.liberarPista(this, recursos.getIdPista());
+actualizarEstado(EstadoAvion.EN_PISTA);
+
+gestorRemolque.engancharRemolque();
+try {
+    Thread.sleep(2000); 
+} finally {
+    gestorRemolque.soltarRemolque();
+}
+
+int idPuerta = torre.solicitarPuerta(this);
+
+Ejercicio 5: Separación de Tráfico (Exclusión Mutua de Grupos)
+
+Enunciado
+Para evitar accidentes, se ha decretado que los aviones de Pasajeros y los aviones de Carga no pueden mezclarse en la calle de rodaje principal.
+
+    La calle de rodaje soporta hasta 4 aviones simultáneos.
+
+    Si hay aviones de Pasajeros dentro, pueden entrar más aviones de Pasajeros (hasta 4), pero los de Carga deben esperar.
+
+    Si la calle se vacía, el primer avión que entre (sea del tipo que sea) bloqueará la calle para el grupo contrario.
+
+Paso 1: Crear GestorRodaje.java
+Java
+
+package aeronpcd.model.concurrent;
+
+public class GestorRodaje {
+    
+    private int avionesDentro = 0;
+    private Boolean esCallePasajeros = null;
+
+    public synchronized void entrarCalle(boolean esPasajero) throws InterruptedException {
+        while (avionesDentro >= 4 || (esCallePasajeros != null && esCallePasajeros != esPasajero)) {
+            wait();
+        }
+        
+        if (avionesDentro == 0) {
+            esCallePasajeros = esPasajero;
+        }
+        avionesDentro++;
+    }
+
+    public synchronized void salirCalle() {
+        avionesDentro--;
+        if (avionesDentro == 0) {
+            esCallePasajeros = null;
+        }
+        notifyAll();
+    }
+}
+
+Paso 2: Modificar Avion.java y Simulador.java
+El avión recibe un booleano esPasajero. Llama a entrarCalle(this.esPasajero) antes de cualquier movimiento terrestre y a salirCalle() al terminar. En el simulador, decides aleatoriamente si el avión instanciado es de carga o pasajeros.
+Ejercicio 6: Bloqueo Asimétrico por Tormenta
+
+Enunciado
+Se debe implementar un sistema de alerta de tormentas. Un HiloTormenta alternará el estado climátológico.
+
+    Si hay tormenta, los despegues quedan totalmente prohibidos. Los aviones que quieran despegar se bloquean.
+
+    Sin embargo, si hay tormenta, los aterrizajes tienen prioridad absoluta. Los aviones en el aire pueden (y deben) seguir aterrizando sin restricciones para ponerse a salvo.
+
+Paso 1: Crear GestorClimaAsimetrico.java
+Este monitor solo frena a los aviones que están en una fase concreta, dejando vía libre al resto.
+Java
+
+package aeronpcd.model.concurrent;
+
+public class GestorClimaAsimetrico {
+    
+    private boolean hayTormenta = false;
+
+    public synchronized void solicitarPermisoDespegue() throws InterruptedException {
+        while (hayTormenta) {
+            wait();
+        }
+    }
+
+    public synchronized void cambiarClima(boolean tormenta) {
+        this.hayTormenta = tormenta;
+        notifyAll();
+    }
+}
+
+Paso 2: Modificar Avion.java
+En este caso no hay un método de salida (salir()) del monitor. Funciona simplemente como una barrera de peaje (checkpoint) que detiene al hilo justo antes de despegar si la bandera está levantada.
+Java
+
+torre.liberarPuerta(this, idPuerta); 
+
+gestorClima.solicitarPermisoDespegue();
+
+int pistaDespegue = torre.solicitarDespegue(this);
+actualizarEstado(EstadoAvion.DESPEGANDO);
+
